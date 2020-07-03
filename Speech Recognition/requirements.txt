@@ -1,0 +1,8 @@
+aesthetix
+librosa
+matplotlib
+numpy
+pydub
+spela
+tensorflow
+tensorflow_addons
