@@ -111,6 +111,15 @@ word_index['endsent'] = len(word_index)+1
 index_word = {word_index[word]:word for word in word_index}
 vocab_size = len(word_index) + 1
 
+def preprocess_sent(text_list):
+    inputs = []
+    for sent in text_list
+    inputs.append(remove_char(sent))
+    input_seq = tokenizer.texts_to_sequences(inputs)    
+    input_seq_pad = pad_sequences(input_seq, maxlen = max_length ,padding = 'post', truncating = 'post')
+    return input_seq_pad 
+
+
 # Embeddings
 
 import os
