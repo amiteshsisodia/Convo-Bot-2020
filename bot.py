@@ -15,7 +15,9 @@ import TextToSpeech.tts as tts
 import SpeechRecognition.gstt_real_time as stt
 import numpy as np
 from response_generation import *
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 import tkinter as tk
+import speech_recognition as sr
 from tkinter import messagebox
 import time
 print("Vatican Cameos.")
@@ -35,7 +37,6 @@ def msg_box():
         return False
 
 
-
 def trigger_word_detection(trigger = "hello", kill = "bye"):
     print("Waiting for triggers.")
     start = time.time()
@@ -43,7 +44,7 @@ def trigger_word_detection(trigger = "hello", kill = "bye"):
     m = sr.Microphone()
     with m as source:
         r.adjust_for_ambient_noise(source)
-    while True:
+    while True: # Listens in 10 second cycles
         try:
             with m as source:
                 audio = r.listen(source, timeout=5, phrase_time_limit=5)
