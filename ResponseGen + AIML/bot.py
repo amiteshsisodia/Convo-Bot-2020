@@ -2,9 +2,11 @@ import sys
 import argparse
 import aiml
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-sys.path.append("Response Generation/")
 
+sys.path.append("Response Generation/")
+kernel=aiml.Kernel()
+kernel.learn("startup.xml")
+kernel.respond("load aiml b")
 # Getting the calling function
 parser = argparse.ArgumentParser(description = "The bot.")
 
