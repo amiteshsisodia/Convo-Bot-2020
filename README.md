@@ -1,6 +1,6 @@
 # ConvBot_group
 
-Robotics Club Summer Project
+Robotics Club Summer Project 2020
 * Team Members:
   * Abhay Dayal Mathur    - https://github.com/Stellarator-X
   * Amitesh Singh Sisodia - https://github.com/Amitesh163
@@ -12,7 +12,18 @@ Robotics Club Summer Project
 
 
 ***
+## Aim
+The aim of this project was to make a **Talking bot** , one which can pay attention to the user's voice and make a meaningful and contextual response according to their intent, just like we're talking to a human.
 
+***
+## Ideation 
+This project was divided into overall three parts :
+
+* [Speech to Text conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/TextToSpeech)
+* [Response Generation](https://github.com/Amitesh163/ConvBot_group/tree/master/Response%20Generation)
+* [Text to speech conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/TextToSpeech)
+
+***
 ## Usage
 
 Installing required dependencies : `$pip install requirements.txt`
@@ -54,7 +65,10 @@ optional arguments:
 * Weather Information
 
 ***
+### Demonstration
+The video demonstration of this project can be found [here](https://drive.google.com/file/d/1jAmxwfUnrx9qa9nh8Sol4ZByIH_w7YRE/view?usp=drivesdk).
 
+***
 ## References
 
 * _Deep Speech 2: End-to-End Speech Recognition in English and Mandarin_
