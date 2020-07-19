@@ -19,7 +19,7 @@ The aim of this project was to make a **Talking bot** , one which can pay attent
 ## Ideation 
 This project was divided into overall three parts :
 
-* [Speech to Text conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/TextToSpeech)
+* [Speech to Text conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/SpeechRecognition)
 * [Response Generation](https://github.com/Amitesh163/ConvBot_group/tree/master/Response%20Generation)
 * [Text to speech conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/TextToSpeech)
 
