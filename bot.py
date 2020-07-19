@@ -11,11 +11,14 @@ func = args.mode
 
 
 print("Loading dependencies ...")
+import aiml
+kernel=aiml.Kernel()
+kernel.learn("AIML/startup.xml")
+kernel.respond("load aiml b")
 import TextToSpeech.tts as tts
 import SpeechRecognition.gstt_real_time as stt
 import numpy as np
 from response_generation import *
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 import tkinter as tk
 import speech_recognition as sr
 from tkinter import messagebox
@@ -68,11 +71,21 @@ def converse():
     while not done:
         print("Say something.")
         stimulus = stt.get_transcript()
+        # Un-comment for mic-less tests
+        if stimulus is None:
+            stimulus = input()
+
         if stimulus is not None:
+            
             if stimulus.lower() == "bye":
                 done = True
             print("You said : ", stimulus)
-            response = get_response(stimulus)
+
+            if kernel.respond(stimulus):
+                response=kernel.respond(stimulus)
+            else:
+                response = get_response(stimulus)
+        
         else :
             response = np.random.choice(glomar)
         tts.play_response(response)

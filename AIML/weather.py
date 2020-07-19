@@ -1,9 +1,14 @@
 import os
-import requests
 import json
-from datetime import date, timedelta
-from darksky import forecast
 import sys
+from datetime import date, timedelta
+
+try:
+    from darksky import forecast
+    import requests
+except:
+    print("This functionality is not currently available for your device")
+    sys.exit()
 API_KEY="58ce87e229a6183b47a82b013ead67b6"
 url = 'http://photon.komoot.de/api/?q='
 def weather(address,query):

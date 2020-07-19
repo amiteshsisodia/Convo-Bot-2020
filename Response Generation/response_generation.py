@@ -1,4 +1,6 @@
-path_to_respgen = "/home/abhay/Projects/Convbot_group/Response Generation"
+import os
+pwd = os.popen("pwd").read()[:-1]
+path_to_respgen = f"{pwd}/Response Generation"
 
 import re
 
@@ -113,8 +115,8 @@ vocab_size = len(word_index) + 1
 
 def preprocess_sent(text_list):
     inputs = []
-    for sent in text_list
-    inputs.append(remove_char(sent))
+    for sent in text_list:
+        inputs.append(remove_char(sent))
     input_seq = tokenizer.texts_to_sequences(inputs)    
     input_seq_pad = pad_sequences(input_seq, maxlen = max_length ,padding = 'post', truncating = 'post')
     return input_seq_pad 

@@ -7,67 +7,67 @@
 
 <category>
     <pattern>CAN YOU SHOW ME PICTURES OF *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 2</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 2</system></template>
 </category>
 
 <category>
     <pattern>CAN YOU SEARCH FOR * ON GOOGLE</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 1</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 1</system></template>
 </category>
 
 <category>
     <pattern>SEARCH FOR * ON GOOGLE</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 1</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 1</system></template>
 </category>
 
 <category>
     <pattern>SEARCH FOR *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 1</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 1</system></template>
 </category>
 
 <category>
     <pattern>CAN YOU SEARCH FOR *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 1</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 1</system></template>
 </category>
 
 <category>
     <pattern>GOOGLE *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 1</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 1</system></template>
 </category>
 
 <category>
     <pattern>PICTURES OF *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 2</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 2</system></template>
 </category>
 
 <category>
     <pattern>SHOW ME PICTURES OF *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 2</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 2</system></template>
 </category>
 
 <category>
     <pattern>GOOGLE PICTURES OF *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 2</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 2</system></template>
 </category>
 
 <category>
     <pattern>GOOGLE PHOTOS OF *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 2</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 2</system></template>
 </category>
 
 <category>
     <pattern>IMAGES OF *</pattern>
-    <template>Sure.Here you go.<system>python googl.py <star /> 2</system></template>
+    <template>Sure.Here you go.<system>python AIML/googl.py <star /> 2</system></template>
 </category>
 
 <category>
     <pattern>WHAT IS THE TEMPERATURE IN *</pattern>
-    <template>Let me see the temperature in <star />. The temperature is <system>python weather.py <star /> 1</system></template>
+    <template>Let me see the temperature in <star />. The temperature is <system>python AIML/weather.py <star /> 1</system></template>
 </category>
 
 <category>
     <pattern>WHAT IS THE HUMIDITY IN *</pattern>
-    <template>Let me see the humidity in <star />. The humidity is <system>python weather.py <star /> 2</system></template>
+    <template>Let me see the humidity in <star />. The humidity is <system>python AIML/weather.py <star /> 2</system></template>
 </category>
 
 <category>
@@ -92,7 +92,7 @@
 
 <category>
     <pattern>WHAT IS THE WEATHER IN *</pattern>
-    <template>THe weather in <star /> is <system>python weather.py <star /> 3</system></template>
+    <template>THe weather in <star /> is <system>python AIML/weather.py <star /> 3</system></template>
 </category>
 
 <category>
