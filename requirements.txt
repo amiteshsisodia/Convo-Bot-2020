@@ -1,2 +1,12 @@
 tkinter
 argparse
+tensorflow
+pulseaudio
+gensim
+nltk
+gtts
+playsound
+aiml
+darksky
+selenium
+numpy
