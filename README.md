@@ -1,6 +1,15 @@
 # ConvBot_group
 
 Robotics Club Summer Project
+* Team Members:
+  * Abhay Dayal Mathur    - https://github.com/Stellarator-X
+  * Amitesh Singh Sisodia - https://github.com/Amitesh163
+  * Anchal Gupta          - https://github.com/anchalgupta05
+  * Arpit Verma           - https://github.com/Av-hash
+  * Manit Ajmera          - https://github.com/manitajmera
+  * Sanskar Mittal        - https://github.com/sanskarm
+  
+
 
 ***
 
