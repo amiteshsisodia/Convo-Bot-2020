@@ -61,7 +61,7 @@ optional arguments:
 ### Functionality
 
 * Casual Conversations
-* Google Search
+* Google search along with an explicit search feature for images
 * Weather Information
 
 ***
