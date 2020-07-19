@@ -24,6 +24,10 @@ This project was divided into overall three parts :
 * [Response Generation](https://github.com/Amitesh163/ConvBot_group/tree/master/Response%20Generation) <sup>[2]</sup>
 * [Text to speech conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/TextToSpeech)
 
+## Overall Pipeline of the Project Implementation
+
+[overall pipeline](images/overall_pipeline.png)
+
 ### Speech Recognition
 
 In the speech recognition part , we used *google-speech-to-text (gstt)* API for the conversion of speech to text transcripts whose *WER is 4.7%*.
