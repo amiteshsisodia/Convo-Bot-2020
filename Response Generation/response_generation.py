@@ -1,8 +1,35 @@
 import os
+import re
+import pickle
+import random
+import numpy as np
+
+import tensorflow as tf
+from tensorflow.keras.layers import Embedding, GRU, Dense 
+from tensorflow.keras.preprocessing.text import Tokenizer, tokenizer_from_json
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+import gensim
+from gensim import models
+from gensim import corpora
+from gensim.utils import simple_preprocess
+from gensim.parsing.preprocessing import STOPWORDS
+
+import nltk
+from nltk.stem import WordNetLemmatizer, PorterStemmer
+from nltk.stem.porter import *
+nltk.download('wordnet')
+nltk.download('stopwords')
+from nltk.corpus import stopwords
+stops = set(stopwords.words('english'))
+allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']
+
+
 pwd = os.popen("pwd").read()[:-1]
 path_to_respgen = f"{pwd}/Response Generation"
 
-import re
+
+# Text Pre-processing
 
 def _should_skip(line, min_length, max_length):
     """Whether a line should be skipped depending on the length."""
@@ -95,8 +122,7 @@ def remove_char(sentence):
 
   return sent
 
-from tensorflow.keras.preprocessing.text import Tokenizer, tokenizer_from_json
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+# Tokenizer
 
 oov_token = "<OOV>"
 max_length = 20
@@ -122,10 +148,7 @@ def preprocess_sent(text_list):
     return input_seq_pad 
 
 
-# Embeddings
-
-import os
-import numpy as np
+# Word Embeddings
 
 embeddings_index = {} 
 f = open(f'{path_to_respgen}/bin/glove.42B.300d.txt')
@@ -146,24 +169,11 @@ for word, i in word_index.items():
         embeddings_matrix[i] = embedding_vector
 
 
-from gensim import models
-from gensim import corpora
+
 # Loading LDA Model
 lda_model = models.ldamodel.LdaModel.load(f'{path_to_respgen}/bin/LDA/LDA.model', mmap = 'r')
 
-
-import gensim
-import nltk
-from gensim.utils import simple_preprocess
-from gensim.parsing.preprocessing import STOPWORDS
-from nltk.stem import WordNetLemmatizer, PorterStemmer
-from nltk.stem.porter import *
-import numpy as np
-nltk.download('wordnet')
-nltk.download('stopwords')
-from nltk.corpus import stopwords
-stops = set(stopwords.words('english'))
-allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']
+# Preprocessing corpus for topic Modeling
 
 stemmer = PorterStemmer()
 
@@ -177,7 +187,7 @@ def preprocess(text):
             result.append(lemmatize_stemming(token))
     return result
 
-from gensim import corpora
+
 topic_dict = corpora.Dictionary.load(fname = f'{path_to_respgen}/bin/topic_dict.dict', mmap = 'r')
 try :
     topic_dict.filter_extremes(no_below=10, no_above=0.5)
@@ -185,7 +195,6 @@ except:
     pass
 
 
-import random
 def extract_topic(input):
 
   c = 0
@@ -202,14 +211,11 @@ def get_topic(input):
     input_seq_pad = pad_sequences(input_seq, maxlen = max_length ,padding = 'post', truncating = 'post')
     return input_seq_pad[0]
 
-# get_response("hello")
-import os
-import pickle
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.layers import Embedding, GRU, Dense 
+"""
+    The Seq2Seq Topic Aware Model Definitions
+"""
+
+
 
 max_sequence_len = 40
 batch_size = 400
@@ -310,6 +316,9 @@ try:
     checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 except:
     print("no saved checkpoints found")
+
+# Evaluation
+
 def get_response(sentence):
     topic_sent = get_topic(sentence)
     sentence = preprocess_sent([sentence])
