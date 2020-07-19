@@ -27,18 +27,18 @@ This project was divided into overall three parts :
 ### Speech Recognition
 In the speech recognition part , we used *google-speech-to-text (gstt)* API for the conversion of speech to text transcripts whose *WER is 4.7%*. 
 A sample example of code is here:
-![sample code](images/speech recognition.png)
+![sample code](images/speech_recognition.png)
 
 ### Response Generation
 We used a subset of opensubtitles dataset to train our response generation model which was a joint combination of context based and topic based attention model.
 This model has a encoder network which produces context vector for an input sentence followed by an attention mechanism which decides how much attention is to be paid to a particular word in a sentence and finally a decoder network which uses attention weights and context vectors to generate words of the output sentence i.e. response. We also added [aiml pipeline](https://github.com/Amitesh163/ConvBot_group/tree/master/ResponseGen%20%2B%20AIML/AIML%20files) to our model give response some specific pattern of inputs which include greeting , emotions, jokes , etc and also it gave our bot weather forecasting and googling ability to much extent.
 Some of the output examples that we've produced with our model are:
-![output examples](images/response examples.jpeg)
+![output examples](images/response_examples.jpeg)
 
 ### Text to speech conversion
 We used the *google-text-to-speech (gtts)* API for the conversion of text transcripts of responses back to speech. Basically text transcripts are feed into this function as txt files , gtts creates mp3 file from those txt files and python *playsound* module is used to play the audio response from that mp3 file which is then removed so as to ensure long conversations may not end up using all memory.
 A sample example of gTTS usage is here :
-![sample example](images/gTTS example img.png)
+![sample example](images/gTTS_example_img.png)
 
 ***
 
