@@ -62,7 +62,7 @@ Response Generation
 │   ├── Tokens.txt
 │   ├── topic_dict.dict
 │   ├── training_checkpoints
-│   └── ...
+│   └── glove.42B.300d.txt
 └── ...
 ```
 
