@@ -26,7 +26,7 @@ This project was divided into overall three parts :
 
 ## Overall Pipeline of the Project Implementation
 
-[overall pipeline](images/overall_pipeline.png)
+![overall pipeline](images/overall_pipeline.png)
 
 ### Speech Recognition
 
