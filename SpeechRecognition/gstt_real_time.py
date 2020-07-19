@@ -1,6 +1,7 @@
 import speech_recognition as sr 
 r = sr.Recognizer() 
-
+with sr.Microphone() as source:
+    r.adjust_for_ambient_noise(source) 
 def get_transcript():
     mic = sr.Microphone()
     with mic as source: 

@@ -64,7 +64,9 @@ def trigger_word_detection(trigger = "hello", kill = "bye"):
 
 def converse():
     done = False
-
+    kernel=aiml.Kernel()
+    kernel.learn("startup.xml")
+    kernel.respond("load aiml b")
     glomar = ['I didn\'t get that', 'You\'ll have to be a little louder.', 'You are not audible.', 'I am afraid I didn\'t get that.']
 
     while not done:
@@ -75,9 +77,7 @@ def converse():
             if stimulus.lower() == "bye":
                 done = True
             print("You said : ", stimulus)
-            kernel=aiml.Kernel()
-            kernel.learn("startup.xml")
-            kernel.respond("load aiml b")
+
             if kernel.respond(stimulus):
                 response=kernel.respond(stimulus)
             else:
