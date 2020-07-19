@@ -1,22 +1,23 @@
-# ConvBot_group
+# Conversational Robot
 
 Robotics Club Summer Project 2020
+
 * Team Members:
-  * Abhay Dayal Mathur    - https://github.com/Stellarator-X
-  * Amitesh Singh Sisodia - https://github.com/Amitesh163
-  * Anchal Gupta          - https://github.com/anchalgupta05
-  * Arpit Verma           - https://github.com/Av-hash
-  * Manit Ajmera          - https://github.com/manitajmera
-  * Sanskar Mittal        - https://github.com/sanskarm
+  * [Abhay Dayal Mathur](https://github.com/Stellarator-X)
+  * [Amitesh Singh Sisodia](https://github.com/Amitesh163)
+  * [Anchal Gupta](https://github.com/anchalgupta05)
+  * [Arpit Verma](https://github.com/Av-hash)
+  * [Manit Ajmera](https://github.com/manitajmera)
+  * [Sanskar Mittal](https://github.com/sanskarm)
   
-
-
 ***
+
 ## Aim
-The aim of this project was to make a **Talking bot** , one which can pay attention to the user's voice and make a meaningful and contextual response according to their intent, just like we're talking to a human.
 
-***
-## Ideation 
+The aim of this project was to make a **Talking bot**, one which can pay attention to the user's voice and generate meaningful and contextual responses according to their intent, much like human conversations.
+
+## Ideation
+
 This project was divided into overall three parts :
 
 * [Speech to Text conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/SpeechRecognition)
@@ -24,6 +25,7 @@ This project was divided into overall three parts :
 * [Text to speech conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/TextToSpeech)
 
 ***
+
 ## Usage
 
 Installing required dependencies : `$pip install requirements.txt`
@@ -58,6 +60,13 @@ optional arguments:
                         detection
 ```
 
+#### Modes
+
+* **Message Box** - Provides a GUI for the user to start the conversation at the click of a button.
+* **Trigger Word Detection** - The program listens in the background and starts the conversation upon hearing the trigger word.
+  * Commencement Trigger - _Hello_
+  * Concluding Trigger - _Bye_
+
 ### Functionality
 
 * Casual Conversations
@@ -65,10 +74,13 @@ optional arguments:
 * Weather Information
 
 ***
+
 ### Demonstration
+
 The video demonstration of this project can be found [here](https://drive.google.com/file/d/1jAmxwfUnrx9qa9nh8Sol4ZByIH_w7YRE/view?usp=drivesdk).
 
 ***
+
 ## References
 
 * _Deep Speech 2: End-to-End Speech Recognition in English and Mandarin_
