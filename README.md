@@ -24,20 +24,23 @@ This project was divided into overall three parts :
 * [Response Generation](https://github.com/Amitesh163/ConvBot_group/tree/master/Response%20Generation) <sup>[2]</sup>
 * [Text to speech conversion](https://github.com/Amitesh163/ConvBot_group/tree/master/TextToSpeech)
 
-## Overall Pipeline of the Project Implementation
+## Overall Pipeline of the Project
 
 ![overall pipeline](images/speech.png)
 
 ### Speech Recognition
 
-In the speech recognition part , we used *google-speech-to-text (gstt)* API for the conversion of speech to text transcripts whose *WER is 4.7%*.
+We used *google-speech-to-text (gstt)* API for the conversion of speech to text transcripts with a WER(Word Error Rate) of *4.7%*.
 
 ### Response Generation
 
 We used a subset of the OpenSubtitles <sup>[4]</sup> dataset to train our response generation model, which was a combination of Context-based and Topic-based Attention Model.</br>
-This model has a encoder network which produces context vector for an input sentence followed by an attention mechanism which decides how much attention is to be paid to a particular word in a sentence and finally a decoder network which uses attention weights and context vectors to generate words of the output sentence i.e. response. We also added an [AIML pipeline](AIML) to our model for responding to some specific pattern of inputs which include greetings, emotions, jokes etc and also added Weather Forecasting and Googling capabilities.</br>
+This model has an encoder network which produces context vector for an input sentence followed by an attention mechanism which decides how much attention is to be paid to a particular word in a sentence and finally a decoder network which uses attention weights and context vectors to generate words of the output sentence i.e. response. We also added an [AIML pipeline](AIML) to our model for responding to some specific pattern of inputs which include greetings, emotions, jokes etc and also added Weather Forecasting and Googling capabilities.</br>
 Some of the output examples that we've produced with our model are:</br>
-![output examples](images/responseexamples.jpeg)
+
+<p align = "center">
+<img src="images/responseexamples.jpeg">
+</p>
 
 ### Text to speech conversion
 
@@ -51,7 +54,7 @@ The API uses *playsound* to play a temporary mp3 file created from the model's t
 Install the required dependencies :
 
 ```bash
-$pip install requirements.txt
+$pip install -r requirements.txt
 $sudo apt-get install gstreamer-1.0
 ```
 
