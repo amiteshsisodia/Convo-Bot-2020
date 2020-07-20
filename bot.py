@@ -72,8 +72,8 @@ def converse():
         print("Say something.")
         stimulus = stt.get_transcript()
         # Un-comment for mic-less tests
-        if stimulus is None:
-            stimulus = input()
+        # if stimulus is None:
+        #    stimulus = input()
 
         if stimulus is not None:
             
